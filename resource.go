@@ -12,7 +12,7 @@ type RType struct {
 }
 
 type ResBase struct {
-	ID   int   `json:"id,omitempty"`
+	ID   int64 `json:"id,omitempty"`
 	Type RType `json:"type"`
 }
 
