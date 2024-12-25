@@ -13,14 +13,14 @@ type RType struct {
 
 type ResBase struct {
 	ID   int64 `json:"id,omitempty"`
-	Type RType `json:"type"`
+	Type RType `json:"type,omitempty"`
 }
 
 type Resource struct {
 	ResBase
 
-	Attrs Attr `json:"attributes"`
-	Rel   Rel  `json:"relations"`
+	Attrs Attr `json:"attributes,omitempty"`
+	Rel   Rel  `json:"relations,omitempty"`
 }
 
 // ------- ResourceVO -------
