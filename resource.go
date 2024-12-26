@@ -8,7 +8,7 @@ type (
 )
 
 type RType struct {
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 type ResBase struct {
