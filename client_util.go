@@ -19,6 +19,7 @@ func (c *Client) call(ctx context.Context, method string, params map[string]any)
 	if err != nil {
 		return nil, err
 	}
+	c.log.Info("reqBody", "value", string(reqBody))
 
 	req, err := http.NewRequestWithContext(ctx, "POST", c.url, bytes.NewBuffer(reqBody))
 	if err != nil {
@@ -42,6 +43,7 @@ func (c *Client) call(ctx context.Context, method string, params map[string]any)
 	if err != nil {
 		return nil, err
 	}
+	c.log.Info("response", "value", string(reqBody))
 	return respBody, nil
 }
 
