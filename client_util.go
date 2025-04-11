@@ -43,7 +43,7 @@ func (c *Client) call(ctx context.Context, method string, params map[string]any)
 	if err != nil {
 		return nil, err
 	}
-	c.log.Info("response", "value", string(respBody))
+	//c.log.Info("response", "value", string(respBody))
 	return respBody, nil
 }
 
